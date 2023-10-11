@@ -1,11 +1,5 @@
 <?php
-$servername = "form";
-$username = "user";
-$db_password = "0000";
-$link = mysqli_connect($servername, $username, $db_password);
-if ($link === false) {
-   die("Error connection failed" . mysqli_connect_error());
-}
+require 'link.php';
 
 
 

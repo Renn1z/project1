@@ -6,16 +6,7 @@ $smarty = new Smarty;
 
 // $smarty->assign('new_user');
 
-$servername = "form";
-$username = "user";
-$db_password = "0000";
-$db = "form";
-
-$link = mysqli_connect($servername, $username, $db_password, $db);
-
-if ($link === false) {
-   die("Error connection failed" . mysqli_connect_error());
-}
+require 'link.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' ) {
    
