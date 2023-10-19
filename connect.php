@@ -32,10 +32,23 @@ $sql = "CREATE TABLE users(
     email VARCHAR(70) NOT NULL UNIQUE)
     ";
 if (mysqli_query($link, $sql)) {
-    echo "\nTable created successfully.";
+    echo "\nTable users created successfully.";
     } 
     else {
         echo "Error created table: $sql. " . mysqli_error($link);
+    }
+
+$sql2 = "CREATE TABLE weather (
+    temp INT(5) NOT NULL, 
+    wing_speed INT(5) NOT NULL, 
+    region VARCHAR(100) NOT NULL,
+    date TEXT NOT NULL)
+    ";
+if (mysqli_query($link, $sql2)) {
+    echo "\nTable weather created successfully.";
+    } 
+    else {
+        echo "Error created table: $sql2. " . mysqli_error($link);
     }
     
 mysqli_close($link);
